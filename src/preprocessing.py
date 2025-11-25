@@ -1,4 +1,5 @@
 # src/preprocessing.py
+import tensorflow as tf
 
 def normalize_and_resize(image):
     """Resizes and scales image pixel values to [0, 1]."""

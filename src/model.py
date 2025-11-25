@@ -44,3 +44,12 @@ def train_model(model, train_data, epochs=10):
     )
     print("Training complete.")
     return history
+
+def save_model(model, filepath):
+    """Saves the model to the specified filepath."""
+    model.save(filepath)
+    print(f"Model saved to {filepath}")
+
+def load_model(filepath):
+    """Loads a model from the specified filepath."""
+    return tf.keras.models.load_model(filepath)
