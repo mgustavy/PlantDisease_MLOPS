@@ -7,7 +7,7 @@ class WebsiteUser(HttpUser):
     def predict(self):
         # Assuming we have a test image available
         # You might need to adjust the path or ensure a file exists
-        with open("data/train/Healthy/8d30d1e1-bc9f-4ea0-9a34-71209748b589___RS_HL 1962.JPG", "rb") as image:
+        with open("data/train/Healthy/800edef467d27c15.jpg", "rb") as image:
             self.client.post("/predict", files={"file": image})
 
     @task(3)

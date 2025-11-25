@@ -7,7 +7,7 @@ st.set_page_config(page_title="Plant Disease Classifier", layout="wide")
 
 API_URL = "http://localhost:8000"
 
-st.title("🌿 Plant Disease Classification System")
+st.title("Plant Disease Classification System")
 
 # Sidebar for navigation
 page = st.sidebar.selectbox("Navigate", ["Prediction", "Dashboard", "Admin"])
