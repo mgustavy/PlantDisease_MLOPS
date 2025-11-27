@@ -3,6 +3,7 @@
 Welcome to **PlantGuard**, a smart tool designed to help identify plant diseases just by looking at a leaf.
 
 🚀 **Live Demo:** [https://plant-disease-app-fme5.onrender.com/](https://plant-disease-app-fme5.onrender.com/)
+
 **Video Demo:** [Video Demo](https://www.bugufi.link/X-3ufG)
 
 ## What is this?
@@ -13,6 +14,18 @@ It's not just a model running in a notebook; it's a full pipeline that includes:
 - A **Streamlit** frontend that makes it easy to use.
 - **Docker** support so it can run anywhere.
 - **Locust** for testing how it handles traffic.
+- **Render** for hosting.
+
+## 📈 Load Test Results
+I ran a flood simulation using **Locust** to see how the app handles traffic.
+- **Scenario**: 10 concurrent users, spawning 2 users/sec.
+- **Results**:
+    - **API Health Check (`/`)**: Extremely fast (<30ms).
+    - **Prediction Endpoint (`/predict`)**: Average response time ~600ms (handling image uploads & inference).
+    - **Success Rate**: 100% (No dropped requests during the test).
+
+---
+*Created as part of an MLOps learning journey.*
 
 ## How to Run It
 You can play with the live demo above, but if you want to run it on your own machine, here's how:
@@ -52,7 +65,7 @@ Here's a quick look at how I organized the code:
 - `Dockerfile`: Where the packaging the app is handled.
 
 ## Tech Stack
-- **Python** (of course!)
+- **Python**
 - **TensorFlow/Keras** for the AI model.
 - **FastAPI** for the backend.
 - **Streamlit** for the UI.
