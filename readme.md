@@ -3,6 +3,7 @@
 Welcome to **PlantGuard AI**, a smart tool designed to help identify plant diseases just by looking at a leaf.
 
 🚀 **Live Demo:** [https://plant-disease-app-fme5.onrender.com/](https://plant-disease-app-fme5.onrender.com/)
+**Video Demo:** [Video Demo](https://www.bugufi.link/X-3ufG)
 
 ## What is this?
 I built this project to explore how we can use Machine Learning in a real-world application. The idea is simple: you upload a photo of a plant leaf, and the system tells you if it's healthy or if it has a disease like **Powdery Mildew** or **Rust**.
