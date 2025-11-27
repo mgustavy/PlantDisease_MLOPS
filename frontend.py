@@ -4,7 +4,7 @@ from PIL import Image
 import os
 import pandas as pd
 
-st.set_page_config(page_title="PlantGuard AI", layout="wide", page_icon="🌿")
+st.set_page_config(page_title="PlantGuard", layout="wide", page_icon="🌿")
 
 API_URL = "http://localhost:8000"
 
@@ -107,7 +107,7 @@ st.markdown("""
 with st.sidebar:
     st.markdown("<div style='text-align: center; margin-bottom: 2rem;'>", unsafe_allow_html=True)
     st.image("https://cdn-icons-png.flaticon.com/512/628/628283.png", width=80)
-    st.markdown("### PlantGuard AI")
+    st.markdown("### PlantGuard")
     st.markdown("<p style='color: #6B7280; font-size: 0.9rem;'>Plant Disease Detection</p>", unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
     

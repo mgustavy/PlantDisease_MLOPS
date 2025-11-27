@@ -1,6 +1,6 @@
 # PlantGuard AI
 
-Welcome to **PlantGuard AI**, a smart tool designed to help identify plant diseases just by looking at a leaf.
+Welcome to **PlantGuard**, a smart tool designed to help identify plant diseases just by looking at a leaf.
 
 🚀 **Live Demo:** [https://plant-disease-app-fme5.onrender.com/](https://plant-disease-app-fme5.onrender.com/)
 **Video Demo:** [Video Demo](https://www.bugufi.link/X-3ufG)
