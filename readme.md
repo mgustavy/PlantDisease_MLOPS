@@ -1,80 +1,58 @@
-# Plant Disease Detection MLOps Pipeline
+# PlantGuard AI
 
-## Project Description
-This project demonstrates an end-to-end Machine Learning pipeline for classifying plant diseases (Healthy, Powdery, Rust). It includes:
-- **Data Processing**: Image resizing and normalization.
-- **Model Training**: Transfer learning using MobileNetV2.
-- **API**: FastAPI backend for predictions and retraining.
-- **UI**: Streamlit frontend for easy interaction.
-- **Deployment**: Dockerized for cloud deployment.
-- **Monitoring**: Locust for load testing.
+Welcome to **PlantGuard AI**, a smart tool designed to help identify plant diseases just by looking at a leaf.
 
-## Setup Instructions
+🚀 **Live Demo:** [https://plant-disease-app-fme5.onrender.com/](https://plant-disease-app-fme5.onrender.com/)
 
-### Prerequisites
-- Docker installed
-- Python 3.9+ installed
+## What is this?
+I built this project to explore how we can use Machine Learning in a real-world application. The idea is simple: you upload a photo of a plant leaf, and the system tells you if it's healthy or if it has a disease like **Powdery Mildew** or **Rust**.
 
-### Local Setup
-1. **Clone the repository**
-   ```bash
-   git clone <repo-url>
-   cd PlantDisease_MLOPS
-   ```
+It's not just a model running in a notebook; it's a full pipeline that includes:
+- A **FastAPI** backend that handles the logic.
+- A **Streamlit** frontend that makes it easy to use.
+- **Docker** support so it can run anywhere.
+- **Locust** for testing how it handles traffic.
 
-2. **Install Dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+## How to Run It
+You can play with the live demo above, but if you want to run it on your own machine, here's how:
 
-3. **Run the Application (Manual)**
-   - Backend: `uvicorn app:app --reload`
-   - Frontend: `streamlit run frontend.py`
+### The Easy Way (Docker)
+If you have Docker installed, you can get it up and running with just two commands:
 
-### Docker Setup (Recommended)
-1. **Build the Image**
-   ```bash
-   docker build -t plant-disease-app .
-   ```
+1.  **Build the app:**
+    ```bash
+    docker build -t plant-disease-app .
+    ```
+2.  **Run it:**
+    ```bash
+    docker run -p 8501:8501 plant-disease-app
+    ```
+    Then just open `http://localhost:8501` in your browser.
 
-2. **Run the Container**
-   ```bash
-   docker run -p 8000:8000 -p 8501:8501 plant-disease-app
-   ```
-   - Access UI at `http://localhost:8501`
-   - Access API Docs at `http://localhost:8000/docs`
+### The Manual Way
+If you prefer running it with Python directly:
 
-## Flood Request Simulation (Locust)
-To simulate high traffic:
-1. Install locust: `pip install locust`
-2. Run locust: `locust -f locustfile.py`
-3. Open `http://localhost:8089` and start the swarm.
+1.  **Install the requirements:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+2.  **Start the app:**
+    ```bash
+    ./start.sh
+    ```
 
-## Video Demo
-[Link to YouTube Demo]
+## Project Structure
+Here's a quick look at how I organized the code:
 
-## Directory Structure
-```
-Project_name/
-│
-├── README.md
-├── Dockerfile
-├── requirements.txt
-├── locustfile.py
-├── app.py
-├── frontend.py
-│
-├── notebook/
-│   └── plant_disease_pipeline.ipynb
-│
-├── src/
-│   ├── preprocessing.py
-│   ├── model.py
-│   └── prediction.py
-│
-├── data/
-│   ├── train/
-│   └── Validation/
-└── models/
-   └── plant_disease_model.h5
-```
+- `app.py`: The brain of the operation (API).
+- `frontend.py`: The user interface you see.
+- `notebook/`: Where I experimented and trained the model.
+- `src/`: Helper scripts for processing images and making predictions.
+- `Dockerfile`: Where the packaging the app is handled.
+
+## Tech Stack
+- **Python** (of course!)
+- **TensorFlow/Keras** for the AI model.
+- **FastAPI** for the backend.
+- **Streamlit** for the UI.
+- **Render** for hosting.
